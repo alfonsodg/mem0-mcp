@@ -9,9 +9,15 @@ from .server import create_server
 
 def main() -> None:
     server = create_server()
-    # Ensure runtime overrides are respected if Smithery injects a different port/host.
     server.settings.host = os.getenv("HOST", server.settings.host)
-    server.settings.port = int(os.getenv("PORT", server.settings.port))
+    server.settings.port = int(os.getenv("PORT", str(server.settings.port)))
+
+    @server.custom_route("/health", methods=["GET"])
+    async def health_check(request):
+        from starlette.responses import JSONResponse
+
+        return JSONResponse({"status": "healthy", "service": "mem0-mcp-server"})
+
     server.run(transport="streamable-http")
 
 
