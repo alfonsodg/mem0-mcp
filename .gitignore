@@ -1,25 +1,77 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+REMOTE.md
+
+# AI agents & copilot — NEVER track
+AGENTS.md
+.github/copilot-instructions.md
+.github/copilot*.md
+.copilot/
+.kiro/
+.cursor/
+.aider*
+.continue/
+.cline/
+.roo/
+.windsurf/
+.augment*
+codex.md
+claude.md
+CLAUDE.md
+.claude/
+
+# Debug & screenshots — NEVER track
+debug/
+
+# Reference docs — NEVER track
+reference/
+
+# Build artifacts
+dist/
+build/
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
 *.egg
-.env
-.venv
-env/
+.eggs/
+pip-log.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
 venv/
+env/
+.benchmarks/
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+.directory
+
+# Logs & temp
+*.log
+tmp/
+.cache/
+*.tmp
+*.bak
+*.orig
+
+# Tool artifacts
 .juno_task/
+uv.lock

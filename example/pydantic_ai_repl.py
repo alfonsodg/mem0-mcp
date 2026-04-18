@@ -36,7 +36,7 @@ if not _env_config_raw:
 else:
     CONFIG_PATH = Path(_env_config_raw).expanduser()
 CONFIG_SERVER_KEY = os.getenv("MEM0_MCP_CONFIG_SERVER", "mem0-local")
-DEFAULT_MODEL = os.getenv("MEM0_MCP_AGENT_MODEL", "openai:gpt-5")
+DEFAULT_MODEL = os.getenv("MEM0_MCP_AGENT_MODEL", "openai:gpt-4o-mini")
 DEFAULT_TIMEOUT = int(os.getenv("MEM0_MCP_SERVER_TIMEOUT", "30"))
 
 
